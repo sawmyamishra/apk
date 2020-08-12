@@ -11,6 +11,7 @@ ADD jd-cli.jar ./jd-cli.jar
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && \
+    apt install -y golang git curl wget && \
     apt-get install zip -y && \
     apt-get install wget -y && \
     apt-get install apktool -y && \
